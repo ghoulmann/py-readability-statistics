@@ -1,0 +1,1 @@
+This computer language is easy to read. Compared to a shell script, it is easy to use. To print, we type print and what it is we want to say. The script will show it on the screen. This makes it a good language with which to start learning.
