@@ -1,0 +1,51 @@
+<html><head><title>Readability Statistics</title></head><body>
+<p>Contents: <a href="#stats">Get Statistics</a> | <a href="#txt">Make a .txt file</a> | <a href="#credits">Credits</a> | <a href="#sample">Sample Results</a> | <a href="#source">Source Code</a></p>
+<h2><a id="stats">Readability Statistics</h2>
+<p>To analyze text readability, choose a plain text (.txt) file using the "browse" button.<p>
+<p>When you've finished, press the "analyze" to have the specified text analyzed.</p>
+<p>After pressing "Analyze," please be patient; each word in the selected text must be compared to a list of 3,000 words.</p>
+<form enctype="multipart/form-data" action="/cgi-bin/save_file.py" method="post">
+<p><b>Text to analyze</b>: <input type="file" name="file"></p>
+<p><input type="submit" value="Analyze"></p>
+</form>
+<p>Note: <a href="http://www.readabilityformulas.com/the-bormuth-readability-formula.php">Bormuth Grade Level Score</a> is under construction.</p>
+<h2><a id="txt">Generating a Plain Text File</h2>
+<p>If you're unsure how to convert a document from Microsoft Word to plaintext, there's a brief guide here: <a href = "http://wmtang.org/2008/01/11/how-to-convert-word-document-files-into-plain-text-files/">http://wmtang.org/2008/01/11/how-to-convert-word-document-files-into-plain-text-files/</a>.
+<h2><a id="credits">Credit Dues</h2>
+<p>Relied extensively Professor Tony Donaldson's code for our code base and as a method to calculate syllables: <a href= "http://csil-web.cs.surrey.sfu.ca/cmpt120fall2010/wiki/TextReadability/">http://csil-web.cs.surrey.sfu.ca/cmpt120fall2010/wiki/TextReadability/</a></p>
+<p>From Dr. Donaldson's base, which, by calculating Flesch-Kincaid values we learned how to work with other algorithms, we expaned to include other readability indexes.
+<p>The code derived from Dr. Donaldson's base is by Lucas, Paul, Alex Navari, Rik Goldman, Stacy Johnson (<a href="http://chelseaschool.edu">the Chelsea School community</a>). </p>
+<h2>Sample Results</h2>
+<p><a id="sample">Sample results for Project Gutenburg's edition of <i>Dracula</i>.</p>
+<pre>
+Total character count: 875360
+Character count without spaces: 711457
+Total syllable count: 225509
+Average Syllables Per Word: 1.37586865402
+Total word count: 163903
+Total sentence count: 10607
+Polysyllable words (3+ syllables): 11941
+Total Familiar Words: 119040.0
+Average Sentence Length: 15.0
+Average Word Length: 4.34071981599
+Average Familiar Words: 0.726283228495
+Percent Difficult Words: 7.28540661245
+Percent Familiar Words: 72.6283228495
+----------------
+Flesch reading ease score (FRES): 74.7523839354
+Dale Chall Adjusted Score: 5.53086570411
+----------------
+Flesch-Kincaid grade level: 6.67166380652
+Simplified Coleman Liau Index score: 7.84906265291
+(Gunning) Fog: 9.09509976198
+SMOG index: 9.19044495281
+Automated Readability Index: 9.62
+*Bormuth Grade Level Score: -2.37269595749
+New Dale Chall Adjusted Grade Level (max of range): 6.0
+----------------
+Average Grade Score: 8.0710451957
+* = under construction (not averaged)
+</pre>
+<h2>Source</h2>
+<a id="source">Source code needs updating. Nevertheless it is available at <a href='https://github.com/ghoulmann/py-readability-statistics'>https://github.com/ghoulmann/py-readability-statistics</a>.
+</body></html>
